@@ -80,7 +80,7 @@
 	
 	$ACR_NAME='awpindacr'       # The name of your Azure container registry`
 	$GIT_USER='vaisakh-mohanan'      # Your GitHub user account name`
-	$GIT_PAT='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' # The PAT you generated in the previous section
+	$GIT_PAT='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' # The PAT you generated in the previous section
 	
 ## 9.	Create the Task
 	
