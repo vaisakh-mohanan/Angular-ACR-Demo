@@ -98,7 +98,7 @@
 	--registry $ACR_NAME `
 	--name awpgitpull `
 	--image awpindacr.azurecr.io/dimsui:prod `
-	--context https://github.developer.allianz.io/AllianzPartnersApplicationDevelopment/$GIT_USER/DIMS_UI.git#azvm `
+	--context https://github.developer.allianz.io/AllianzPartnersApplicationDevelopment/$GIT_USER/DIMS_UI.git#master `
 	--file Dockerfile `
 	--git-access-token $GIT_PAT
 	
@@ -110,7 +110,7 @@
 	--registry $ACR_NAME `
 	--name awpgitpull `
 	--image awpindacr.azurecr.io/angularsample:prod `
-	--context https://github.com/vaisakh-mohanan/Angular-ACR-Demo.git#azure `
+	--context https://github.com/vaisakh-mohanan/Angular-ACR-Demo.git#master `
 	--file Dockerfile `
 	--git-access-token $GIT_PAT
 	
@@ -145,7 +145,7 @@
 		  --commit-trigger-enabled true `
 		  --pull-request-trigger-enabled false `
 		  --base-image-trigger-enabled false `
-		  --context https://github.com/vaisakh-mohanan/Angular-ACR-Demo.git#azure `
+		  --context https://github.com/vaisakh-mohanan/Angular-ACR-Demo.git#master `
 		  --assign-identity $MSI_ID `
 		  --file build.yaml `
 		  --git-access-token $GIT_PAT
