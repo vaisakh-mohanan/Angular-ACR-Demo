@@ -1,6 +1,6 @@
 version: v1.1.0
 steps:
-  - build: -t $Registry/angular-app:$ID -f Dockerfile .
+  - build: -t $Registry/angular-app:$ID -t $Registry/angular-app:latest -f Dockerfile .
   - push:
-      - $Registry/angular-app:$ID
-  - cmd: $Registry/angular-app:$ID
+    - $Registry/angular-app:$ID
+    - $Registry/angular-app:latest
