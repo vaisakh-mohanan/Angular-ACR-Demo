@@ -104,7 +104,7 @@
 	
 	Example 2:
 	
-	$GIT_PAT='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'
+	$GIT_PAT='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'
 	
 	az acr task create `
 	--registry $ACR_NAME `
