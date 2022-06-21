@@ -149,3 +149,43 @@
 		  --assign-identity $MSI_ID `
 		  --file build.yaml `
 		  --git-access-token $GIT_PAT
+      
+      
+#Deploy the Web App from your Container Image
+
+## 1. Create an App Service Plan for your web app
+      This will determine the size of the virtual machine that will run your docker image. Here I have selected a sku of F1 — free tier. Create the app service plan     from within the portal or by running:
+      
+      az appservice plan create `
+      --resource-group {RESOURCEGROUPNAME} `
+      --name {APPSERVICENAME} `
+      --location eastus `
+      --is-linux `
+      --sku F1
+      
+      Ex:
+       az appservice plan create `
+      --resource-group aztech-rg `
+      --name angularAppDemoPlan `
+      --location eastus `
+      --is-linux `
+      --sku F1
+      
+## 2. Create the Azure web app from the docker container in the Container Registry
+
+  az webapp create --resource-group {RESOURCEGROUPNAME} `
+  --plan {APPSERVICEPLANNAME} `
+  --name {WEBAPPNAME} `
+  --deployment-container-image-name {REGISTRYNAME/IMAGENAME:IMGTAG} `
+  --docker-registry-server-password {PASSWORD}
+  
+  Ex:
+  
+   az webapp create --resource-group aztech-rg `
+  --plan angularAppDemoPlan `
+  --name angularAppDemo `
+  --deployment-container-image-name awpindacr.azurecr.io/angular-app:latest `
+  --docker-registry-server-password 'HVZu1qbuBNpBw4vnqDyMYb2=rOKVqL0N'
+  --subscription aztecld-westeurope-dev
+  
+  Note : To vie Password : az acr credential show -n {REGISTRY NAME} --query passwords[0].value
