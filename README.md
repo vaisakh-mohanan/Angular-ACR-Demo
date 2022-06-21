@@ -1,5 +1,5 @@
 
-#Deploying a Angular App to Azure Container Registry From Git
+# Deploying a Angular App to Azure Container Registry From Git
 ============================================================
 	Reference : https://medium.com/swlh/deploy-an-angular-app-to-azure-955f0c750686
 
@@ -151,7 +151,7 @@
 		  --git-access-token $GIT_PAT
       
       
-#Deploy the Web App from your Container Image
+# Deploy the Web App from your Container Image
 
 ## 1. Create an App Service Plan for your web app
       This will determine the size of the virtual machine that will run your docker image. Here I have selected a sku of F1 — free tier. Create the app service plan     from within the portal or by running:
