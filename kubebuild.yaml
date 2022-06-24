@@ -32,6 +32,8 @@ spec:
         env:
         - name: REDIS
           value: "azure-vote-back"
+      imagePullSecrets:
+        - name: awppullsecret
 ---
 apiVersion: v1
 kind: Service
